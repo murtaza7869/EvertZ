@@ -5,7 +5,7 @@ $Url = "https://github.com/murtaza7869/EvertZ/raw/main/default.zip"
 
 $DownloadZipFile = "C:\Windows\Temp\" + $(Split-Path -Path $Url -Leaf)
 
-$ExtractPath = "O:\ProfilesFolder\users\"
+$ExtractPath = "C:\users\"
 
 Invoke-WebRequest -Uri $Url -OutFile $DownloadZipFile
 
