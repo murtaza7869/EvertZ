@@ -1,7 +1,7 @@
 ﻿#local url to download zip file
 #Assign zip file url to local variable
 
-$Url = "http://192.168.0.112/default.zip"
+$Url = "https://github.com/murtaza7869/EvertZ/raw/main/default.zip"
 
 $DownloadZipFile = "C:\Windows\Temp\" + $(Split-Path -Path $Url -Leaf)
 
