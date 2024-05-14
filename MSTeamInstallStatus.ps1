@@ -1,12 +1,20 @@
-# Define the package full name for Microsoft Teams
-$teamsPackageFullName = "MSTeams"
+# Get all installed Windows Apps
+$apps = Get-AppxPackage
 
-# Check if Microsoft Teams is installed from the Windows Store
-$teamsInstalled = Get-AppxPackage | Where-Object { $_.Name -eq $teamsPackageFullName }
-
-# Check if Microsoft Teams is installed
-if ($teamsInstalled) {
-    Write-Host "Microsoft Teams is installed."
-} else {
-    Write-Host "Microsoft Teams is not installed."
+# Loop through each app and print its details
+foreach ($app in $apps) {
+    $appName = $app.Name
+    $appPublisher = $app.Publisher
+    $appVersion = $app.Version
+    $appArchitecture = $app.Architecture
+    $appInstallLocation = $app.InstallLocation
+    $appPackageFullName = $app.PackageFullName
+    
+    Write-Host "Name: $appName"
+    Write-Host "Publisher: $appPublisher"
+    Write-Host "Version: $appVersion"
+    Write-Host "Architecture: $appArchitecture"
+    Write-Host "Install Location: $appInstallLocation"
+    Write-Host "Package Full Name: $appPackageFullName"
+    Write-Host ""
 }
