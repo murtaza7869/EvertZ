@@ -1,8 +1,8 @@
 # Define the path to the XML file
-$xmlFilePath = $Args
+# $xmlFilePath = $Args
 
 # Load the XML file
-[xml]$xmlContent = Get-Content $xmlFilePath
+[xml]$xmlContent = Get-Content $Args
 
 # Print the XML content to the console
 $xmlContent.OuterXml
